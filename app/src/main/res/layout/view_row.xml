@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+   >
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp">
+        app:cardCornerRadius="10dp"
+        android:layout_margin="5dp"
+       >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="12dp">
+            android:padding="7dp"
+            >
 
             <TextView
                 android:id="@+id/book_id_text"
@@ -22,6 +27,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="12dp"
                 android:text="1"
+                android:alpha=".85"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="40sp"
                 android:textStyle="bold"
@@ -35,9 +41,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:text="Title 1"
+                android:alpha=".80"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="20sp"
-                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/book_id_text"
                 app:layout_constraintTop_toTopOf="@+id/book_id_text" />
 
@@ -46,6 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="author 1"
+                android:alpha=".8"
                 android:textColor="?android:attr/textColorPrimary"
                 app:layout_constraintStart_toStartOf="@+id/book_title_text"
                 app:layout_constraintTop_toBottomOf="@+id/book_title_text" />
@@ -54,9 +61,12 @@
                 android:id="@+id/book_pages"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
                 android:text="130"
+                android:alpha=".75"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
