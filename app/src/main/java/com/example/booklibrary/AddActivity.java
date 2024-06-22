@@ -35,6 +35,7 @@ public class AddActivity extends AppCompatActivity {
                     databaseHelper.addBook(title,
                             author,Integer.parseInt(pages));
                     button.setEnabled(false);
+
                     Intent intent=new Intent(AddActivity.this,MainActivity.class);
                     startActivity(intent);
                     finish();
@@ -43,5 +44,12 @@ public class AddActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent(AddActivity.this,MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

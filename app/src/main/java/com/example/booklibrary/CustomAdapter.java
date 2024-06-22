@@ -56,7 +56,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                 intent.putExtra("title",String.valueOf(book_title.get(position)));
                 intent.putExtra("author",String.valueOf(book_author.get(position)));
                 intent.putExtra("pages",String.valueOf(book_pages.get(position)));
-                activity.startActivityForResult(intent,1);
+                context.startActivity(intent);
+                activity.finish();
             }
         });
     }

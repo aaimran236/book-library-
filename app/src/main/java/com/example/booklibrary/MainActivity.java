@@ -19,6 +19,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private FloatingActionButton add_button;
     private DatabaseHelper databaseHelper;
-    ArrayList<String> book_id, book_title, book_author, book_pages;
+    static ArrayList<String> book_id, book_title, book_author, book_pages;
     CustomAdapter customAdapter;
     private LottieAnimationView emptyFolder;
     private TextView noDataText;
@@ -47,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, AddActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         databaseHelper = new DatabaseHelper(MainActivity.this);
@@ -55,10 +58,17 @@ public class MainActivity extends AppCompatActivity {
         book_author = new ArrayList<>();
         book_pages = new ArrayList<>();
         storeDataInArrays();
+        setRecyclerView();
+//        customAdapter = new CustomAdapter(MainActivity.this, this, book_id, book_title, book_author, book_pages);
+//        recyclerView.setAdapter(customAdapter);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+
+    }
+
+    void setRecyclerView(){
         customAdapter = new CustomAdapter(MainActivity.this, this, book_id, book_title, book_author, book_pages);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
-
     }
 
     void storeDataInArrays() {
@@ -161,4 +171,5 @@ public class MainActivity extends AppCompatActivity {
         });
         builder.create().show();
     }
+
 }

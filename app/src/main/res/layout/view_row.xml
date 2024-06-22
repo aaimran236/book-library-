@@ -30,30 +30,36 @@
                 android:alpha=".85"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="40sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/book_title_text"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Title 1"
+                android:layout_marginEnd="16dp"
                 android:alpha=".80"
+                android:text="Title 1"
+                android:textStyle="bold"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/book_author_text"
+                app:layout_constraintEnd_toStartOf="@+id/book_pages"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/book_id_text"
                 app:layout_constraintTop_toTopOf="@+id/book_id_text" />
 
             <TextView
                 android:id="@+id/book_author_text"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="author 1"
+                android:layout_marginEnd="16dp"
                 android:alpha=".8"
+                android:text="author 1"
                 android:textColor="?android:attr/textColorPrimary"
+                app:layout_constraintEnd_toStartOf="@+id/book_pages"
                 app:layout_constraintStart_toStartOf="@+id/book_title_text"
                 app:layout_constraintTop_toBottomOf="@+id/book_title_text" />
 

@@ -12,10 +12,10 @@
         android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="Welcome to Book Store App"
+        android:text="Book library"
         android:gravity="center"
         android:textColor="#00899A"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/lottie"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,5 +33,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
-        app:lottie_rawRes="@raw/books" />
+        app:lottie_rawRes="@raw/booklottie1"
+       />
 </androidx.constraintlayout.widget.ConstraintLayout>

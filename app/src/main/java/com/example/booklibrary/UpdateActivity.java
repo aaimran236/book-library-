@@ -86,9 +86,10 @@ public class UpdateActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 databaseHelper.deleteOneRow(id);
+
                 Intent intent=new Intent(UpdateActivity.this,MainActivity.class);
                 startActivity(intent);
-               finish();
+                finish();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {

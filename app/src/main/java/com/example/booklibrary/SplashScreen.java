@@ -16,7 +16,7 @@ public class SplashScreen extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_splash_screen);
         TextView textView=findViewById(R.id.textView);
-        textView.animate().translationY(1000).setDuration(2000).setStartDelay(0);
+        textView.animate().translationY(850).setDuration(2500).setStartDelay(0);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -24,6 +24,6 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },4000);
+        },3000);
     }
 }
